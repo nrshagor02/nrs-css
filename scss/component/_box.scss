@@ -1,0 +1,17 @@
+.nrs-container {
+  display: flex;
+  flex-direction: row;
+  margin: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.nrs-box {
+  min-width: 150px;
+  min-height: 150px;
+  padding: 20px;
+  background-color: #dfdfdf52;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
