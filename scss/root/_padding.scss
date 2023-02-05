@@ -1,0 +1,250 @@
+@use "sass:math";
+@mixin padding-margin($num) {
+  @if ($num) {
+    /* ==================================
+    class name create: num/2 ex: 1/2=0.5
+    value create numb/16 ex 1/16=0.0625 rem or 1 px
+    ====================================*/
+    @for $i from 1 through 30 {
+      // padding even
+      .nrs-p-#{(math.div($num, 2)) * $i} {
+        padding: (math.div($num, 16) * $i) + rem;
+      }
+      // padding-top
+      .nrs-pt-#{(math.div($num, 2)) * $i} {
+        padding-top: (math.div($num, 16) * $i) + rem;
+      }
+      // padding-bottom
+      .nrs-pb-#{(math.div($num, 2)) * $i} {
+        padding-bottom: (math.div($num, 16) * $i) + rem;
+      }
+      // padding-left
+      .nrs-pl-#{(math.div($num, 2)) * $i} {
+        padding-left: (math.div($num, 16) * $i) + rem;
+      }
+      // padding-right
+      .nrs-pr-#{(math.div($num, 2)) * $i} {
+        padding-left: (math.div($num, 16) * $i) + rem;
+      }
+      // padding-left-right
+      .nrs-px-#{(math.div($num, 2)) * $i} {
+        padding: 0rem ($num * $i + rem);
+      }
+      // padding-top-buttom
+      .nrs-py-#{(math.div($num, 2)) * $i} {
+        padding: ($num * $i + rem) 0rem;
+      }
+      // margin
+      .nrs-m-#{(math.div($num, 2)) * $i} {
+        margin: (math.div($num, 16) * $i) + rem;
+      }
+      // margin-top
+      .nrs-mt-#{(math.div($num, 2)) * $i} {
+        margin-top: (math.div($num, 16) * $i) + rem;
+      }
+      // margin-bottom
+      .nrs-mb-#{(math.div($num, 2)) * $i} {
+        margin-bottom: (math.div($num, 16) * $i) + rem;
+      }
+      // margin-left
+      .nrs-ml-#{(math.div($num, 2)) * $i} {
+        margin-left: (math.div($num, 16) * $i) + rem;
+      }
+      // margin-right
+      .nrs-mr-#{(math.div($num, 2)) * $i} {
+        margin-right: (math.div($num, 16) * $i) + rem;
+      }
+      // margin-left-right
+      .nrs-mx-#{(math.div($num, 2)) * $i} {
+        margin: 0rem (math.div($num, 16) * $i) + rem;
+      }
+      // margin-top-buttom
+      .nrs-my-#{(math.div($num, 2)) * $i} {
+        margin: (math.div($num, 16) * $i) + rem 0rem;
+      }
+      // padding odd
+      .nrs-p-#{(math.div($num, 2)+1) * $i} {
+        padding: (math.div($num, 16) + 1) * $i + rem;
+      }
+      // padding-top
+      .nrs-pt-#{(math.div($num, 2)+1) * $i} {
+        padding-top: (math.div($num, 16) + 1) * $i + rem;
+      }
+      // padding-bottom
+      .nrs-pb-#{(math.div($num, 2)+1) * $i} {
+        padding-bottom: (math.div($num, 16) + 1) * $i + rem;
+      }
+      // padding-left
+      .nrs-pl-#{(math.div($num, 2)+1) * $i} {
+        padding-left: (math.div($num, 16) + 1) * $i + rem;
+      }
+      // padding-right
+      .nrs-pr-#{(math.div($num, 2)+1) * $i} {
+        padding-left: (math.div($num, 16) + 1) * $i + rem;
+      }
+      // padding-left-right
+      .nrs-px-#{(math.div($num, 2)+1) * $i} {
+        padding: 0rem ((math.div($num, 16) + 1) * $i + rem);
+      }
+      // padding-top-buttom
+      .nrs-py-#{(math.div($num, 2)+1) * $i} {
+        padding: ((math.div($num, 16) + 1) * $i + rem) 0rem;
+      }
+      // margin
+      .nrs-m-#{(math.div($num, 2)+1) * $i} {
+        margin: (math.div($num, 16) + 1) * $i + rem;
+      }
+      // margin-top
+      .nrs-mt-#{(math.div($num, 2)+1) * $i} {
+        margin-top: (math.div($num, 16) + 1) * $i + rem;
+      }
+      // margin-bottom
+      .nrs-mb-#{(math.div($num, 2)+1) * $i} {
+        margin-bottom: (math.div($num, 16) + 1) * $i + rem;
+      }
+      // margin-left
+      .nrs-ml-#{(math.div($num, 2)+1) * $i} {
+        margin-left: (math.div($num, 16) + 1) * $i + rem;
+      }
+      // margin-right
+      .nrs-mr-#{(math.div($num, 2)+1) * $i} {
+        margin-right: (math.div($num, 16) + 1) * $i + rem;
+      }
+      // margin-left-right
+      .nrs-mx-#{(math.div($num, 2)+1) * $i} {
+        margin: 0rem ((math.div($num, 16) + 1) * $i + rem);
+      }
+      // margin-top-buttom
+      .nrs-my-#{(math.div($num, 2)+1) * $i} {
+        margin: ((math.div($num, 16) + 1) * $i + rem) 0rem;
+      }
+    }
+  }
+}
+
+// @mixin padding-margin-rem($num) {
+//   @if ($num) {
+//     @for $i from 1 through 10 {
+//       // padding even
+//       .nrs-p-#{$num * $i}rem {
+//         padding: (math.div($num, 16) * $i) + rem;
+//       }
+//       // padding-top
+//       .nrs-pt-#{$num * $i}rem {
+//         padding-top: (math.div($num, 16) * $i) + rem;
+//       }
+//       // padding-bottom
+//       .nrs-pb-#{$num * $i}rem {
+//         padding-bottom: (math.div($num, 16) * $i) + rem;
+//       }
+//       // padding-left
+//       .nrs-pl-#{$num * $i}rem {
+//         padding-left: (math.div($num, 16) * $i) + rem;
+//       }
+//       // padding-right
+//       .nrs-pr-#{$num * $i}rem {
+//         padding-left: (math.div($num, 16) * $i) + rem;
+//       }
+//       // padding-left-right
+//       .nrs-px-#{$num * $i}rem {
+//         padding: 0px ($num * $i + px);
+//       }
+//       // padding-top-buttom
+//       .nrs-py-#{$num * $i}rem {
+//         padding: ($num * $i + px) 0px;
+//       }
+//       // margin
+//       .nrs-m-#{$num * $i}rem {
+//         margin: (math.div($num, 16) * $i) + rem;
+//       }
+//       // margin-top
+//       .nrs-mt-#{$num * $i}rem {
+//         margin-top: (math.div($num, 16) * $i) + rem;
+//       }
+//       // margin-bottom
+//       .nrs-mb-#{$num * $i}rem {
+//         margin-bottom: (math.div($num, 16) * $i) + rem;
+//       }
+//       // margin-left
+//       .nrs-ml-#{$num * $i}rem {
+//         margin-left: (math.div($num, 16) * $i) + rem;
+//       }
+//       // margin-right
+//       .nrs-mr-#{$num * $i}rem {
+//         margin-right: (math.div($num, 16) * $i) + rem;
+//       }
+//       // margin-left-right
+//       .nrs-mx-#{$num * $i}rem {
+//         margin: 0rem ($num * $i + rem);
+//       }
+//       // margin-top-buttom
+//       .nrs-my-#{($num+1) * $i}rem {
+//         margin: ((math.div($num, 16) + 1) * $i + rem) 0rem;
+//       }
+//       // padding odd
+//       .nrs-p-#{($num+1) * $i}rem {
+//         padding: (math.div($num, 16) + 1) * $i + rem;
+//       }
+//       // padding-top
+//       .nrs-pt-#{($num+1) * $i}rem {
+//         padding-top: (math.div($num, 16) + 1) * $i + rem;
+//       }
+//       // padding-bottom
+//       .nrs-pb-#{($num+1) * $i}rem {
+//         padding-bottom: (math.div($num, 16) + 1) * $i + rem;
+//       }
+//       // padding-left
+//       .nrs-pl-#{($num+1) * $i}rem {
+//         padding-left: (math.div($num, 16) + 1) * $i + rem;
+//       }
+//       // padding-right
+//       .nrs-pr-#{($num+1) * $i}rem {
+//         padding-left: (math.div($num, 16) + 1) * $i + rem;
+//       }
+//       // padding-left-right
+//       .nrs-px-#{($num+1) * $i}rem {
+//         padding: 0rem ((math.div($num, 16) + 1) * $i + rem);
+//       }
+//       // padding-top-buttom
+//       .nrs-py-#{($num+1) * $i}rem {
+//         padding: ((math.div($num, 16) + 1) * $i + rem) 0rem;
+//       }
+//       // margin
+//       .nrs-m-#{($num+1) * $i}rem {
+//         margin: (math.div($num, 16) + 1) * $i + rem;
+//       }
+//       // margin-top
+//       .nrs-mt-#{($num+1) * $i}rem {
+//         margin-top: (math.div($num, 16) + 1) * $i + rem;
+//       }
+//       // margin-bottom
+//       .nrs-mb-#{($num+1) * $i}rem {
+//         margin-bottom: (math.div($num, 16) + 1) * $i + rem;
+//       }
+//       // margin-left
+//       .nrs-ml-#{($num+1) * $i}rem {
+//         margin-left: (math.div($num, 16) + 1) * $i + px;
+//       }
+//       // margin-right
+//       .nrs-mr-#{($num+1) * $i}rem {
+//         margin-right: (math.div($num, 16) + 1) * $i + rem;
+//       }
+//       // margin-left-right
+//       .nrs-mx-#{($num+1) * $i}rem {
+//         margin: 0px ((math.div($num, 16) + 1) * $i + rem);
+//       }
+//       // margin-top-buttom
+//       .nrs-my-#{($num+1) * $i}rem {
+//         margin: ((math.div($num, 16) + 1) * $i + rem) 0rem;
+//       }
+//     }
+//   }
+// }
+
+@include padding-margin(2);
+.nrs-p-auto {
+  padding: auto;
+}
+.nrs-m-auto {
+  margin: auto;
+}

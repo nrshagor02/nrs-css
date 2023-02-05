@@ -1,0 +1,7 @@
+@use "sass:list";
+@import "variables";
+@each $key, $val in $boxShadow {
+  .nrs-shadow-#{$key} {
+    box-shadow: $val;
+  }
+}

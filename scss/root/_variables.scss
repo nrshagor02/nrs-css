@@ -1,0 +1,161 @@
+$Success: #5cb85c;
+$Info: #5bc0de;
+$Warning: #f0ad4e;
+$Danger: #d9534f;
+// Black
+$Black: #000000;
+$LightBlack: #454545;
+// White
+$White: #ffffff;
+$DarkWhite: #e1d9d1;
+// Red
+$Red: #ff0000;
+$LightRed: #ffcccb;
+$DarkRed: #8b0000;
+// Orange
+$Orange: #ffa500;
+$LightOrange: #ffd580;
+$DarkOrange: #8b4000;
+// Yellow
+$Yellow: #ffff00;
+$DarkYellow: #8b8000;
+$LightYellow: #8b8000;
+// Green
+$Green: #008000;
+$LightGreen: #90ee90;
+$DarkGreen: #023020;
+// Blue
+$Blue: #0000ff;
+$LightBlue: #add8e6;
+$DarkBlue: #00008b;
+// Gray
+$Gray: #808080;
+$LightGray: #d3d3d3;
+$DarkGray: #5a5a5a;
+// Purple
+$Purple: #a020f0;
+$LightPurple: #cbc3e3;
+$DarkPurple: #301934;
+// Magenta
+$Magenta: #ff00ff;
+$LightMagenta: #ff80ff;
+$DarkMagenta: #8b008b;
+
+$colors: (
+  "success": #5cb85c,
+  "info": #5bc0de,
+  "warning": #f0ad4e,
+  "danger": #d9534f,
+  // Black
+  "black": #000000,
+  // White
+  "white": #ffffff,
+  // Red
+  "red": #ff0000,
+  // Orange
+  "orange": #ffa500,
+  // Yellow
+  "yellow": #ffff00,
+  // Green
+  "green": #008000,
+  // Blue
+  "blue": #0000ff,
+  // Gray
+  "gray": #808080,
+  // Purple
+  "purple": #800080,
+  // Magenta
+  "magenta": #ff00ff,
+);
+$multicolor: (
+  "red-blue-yellow": (
+    red,
+    blue,
+    yellow,
+  ),
+  "red-purple-megenta": (
+    #ff0000,
+    #800080,
+    #ff00ff,
+  ),
+);
+// box-shadow
+$boxShadow: (
+  "1": (
+    rgba(0, 0, 0, 0.12) 0px 1px 3px,
+    rgba(0, 0, 0, 0.24) 0px 1px 2px,
+  ),
+  "2": (
+    rgba(0, 0, 0, 0.16) 0px 3px 6px,
+    rgba(0, 0, 0, 0.23) 0px 3px 6px,
+  ),
+  "3": (
+    rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px,
+  ),
+  "4": (
+    rgba(0, 0, 0, 0.05) 0px 0px 0px 1px,
+  ),
+  "5": (
+    rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px,
+  ),
+  "6": (
+    rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px,
+  ),
+  "7": (
+    rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px,
+  ),
+  "8": (
+    rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+    rgba(0, 0, 0, 0.2) 0px -3px 0px inset,
+  ),
+  "9": (
+    rgba(0, 0, 0, 0.16) 0px 1px 4px,
+    rgb(51, 51, 51) 0px 0px 0px 3px,
+  ),
+  "10": (
+    0px 0px 0px 5px rgba(0, 0, 0, 0.05),
+  ),
+  "11": (
+    0px 0px 12px -3px rgba(0, 0, 0, 0.27) inset,
+  ),
+  "outset": (
+    0.3rem 0.3rem 0.5rem rgb(195 193 198 / 90%),
+    -0.2rem -0.2rem 0.4rem #fff,
+  ),
+  "inset": (
+    inset 0.2rem 0.2rem 0.5rem rgb(195 193 198 / 90%),
+    inset -0.2rem -0.2rem 0.5rem #fff,
+  ),
+  "raised": (
+    inset 0.2rem 0.2rem 0.5rem #fff,
+    inset -0.2rem -0.2rem 0.5rem rgb(195 193 198 / 90%),
+    0.3rem 0.3rem 0.5rem rgb(195 193 198 / 90%),
+    -0.2rem -0.2rem 0.4rem #fff,
+  ),
+  "sunken": (
+    -0.3rem -0.3rem 0.5rem rgb(195 193 198 / 90%),
+    0.2rem 0.2rem 0.4rem #fff,
+  ),
+  "ridge": (
+    inset 0.2rem 0.2rem 0.5rem rgb(195 193 198 / 90%),
+    inset -0.2rem -0.2rem 0.5rem #fff,
+    0.3rem 0.3rem 0.5rem rgb(195 193 198 / 90%),
+    -0.2rem -0.2rem 0.4rem #fff,
+  ),
+  "overflow": (
+    rgb(0 0 0 / 32%) 0px 0px 2px 0px,
+    rgb(0 0 0 / 12%) 5px 5px 0px,
+    rgb(0 0 0 / 20%) 10px 10px,
+    rgb(0 0 0 / 10%) 15px 15px,
+    rgb(20 20 20 / 5%) 20px 20px,
+  ),
+  "curve": (
+    inset 1px 20px 20px 1px #d3cfcf70,
+    -3px -4px 33px 0px #fff,
+  ),
+);

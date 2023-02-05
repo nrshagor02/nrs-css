@@ -1,0 +1,123 @@
+@use "sass:list";
+@import "variables";
+@mixin background-color($val...) {
+  //if signle background color then set a background color
+  @if list.length($val) == 1 {
+    background-color: $val;
+  } @else {
+    background-image: linear-gradient(to top left, $val);
+  }
+  //if multiple background color, then set gradient
+}
+@each $key, $val in $multicolor {
+  .nrs-txt-#{$key} {
+    color: $val;
+  }
+  .nrs-bg-#{$key} {
+    @include background-color($val...);
+  }
+  .nrs-hvr-#{$key} {
+    &:hover {
+      @include background-color($val...);
+    }
+  }
+  .nrs-bg-active-#{$key} {
+    &:active {
+      @include background-color($val...);
+    }
+  }
+}
+@each $key, $val in $colors {
+  .nrs-txt-#{$key} {
+    color: $val;
+  }
+  .nrs-bg-#{$key} {
+    background-color: $val;
+  }
+  .nrs-border-#{$key} {
+    border: 1px solid $val !important;
+  }
+  .nrs-hvr-#{$key} {
+    &:hover {
+      background-color: $val;
+    }
+  }
+  .nrs-hvr-border-#{$key} {
+    &:hover {
+      border: 1px solid $val !important;
+    }
+  }
+  .nrs-bg-active-#{$key} {
+    &:active {
+      background-color: $val;
+    }
+  }
+  .nrs-txt-active-#{$key} {
+    &:active {
+      color: $val;
+    }
+  }
+
+  @for $i from 1 through 10 {
+    // light
+    .nrs-txt-#{$key}-light-#{$i} {
+      color: mix(white, $val, $i * 10);
+    }
+    .nrs-bg-#{$key}-light-#{$i} {
+      background-color: mix(white, $val, $i * 10);
+    }
+    .nrs-hvr-#{$key}-light-#{$i} {
+      &:hover {
+        background-color: mix(white, $val, $i * 10);
+      }
+    }
+    .nrs-boder-#{$key}-light-#{$i} {
+      border: 1px solid mix(white, $val, $i * 10) !important;
+    }
+    .nrs-hvr-border-#{$key}-light-#{$i} {
+      &:hover {
+        border: 1px solid mix(white, $val, $i * 10) !important;
+      }
+    }
+    .nrs-bg-active-#{$key}-light-#{$i} {
+      &:active {
+        background-color: mix(white, $val, $i * 10);
+      }
+    }
+    .nrs-txt-active-#{$key}-light-#{$i} {
+      &:active {
+        color: mix(white, $val, $i * 10);
+      }
+    }
+    // dark
+    .nrs-txt-#{$key}-dark-#{$i} {
+      color: mix(rgb(0, 0, 0), $val, $i * 10);
+    }
+    .nrs-bg-#{$key}-dark-#{$i} {
+      background-color: mix(rgb(0, 0, 0), $val, $i * 10);
+    }
+    .nrs-hvr-#{$key}-dark-#{$i} {
+      &:hover {
+        background-color: mix(rgb(0, 0, 0), $val, $i * 10);
+      }
+    }
+    .nrs-bg-active-#{$key}-dark-#{$i} {
+      &:active {
+        background-color: mix(rgb(0, 0, 0), $val, $i * 10);
+      }
+    }
+    .nrs-txt-active-#{$key}-dark-#{$i} {
+      &:active {
+        color: mix(rgb(0, 0, 0), $val, $i * 10);
+      }
+    }
+    .nrs-border-#{$key}-dark-#{$i} {
+      border: 1px solid mix(rgb(0, 0, 0), $val, $i * 10) !important;
+    }
+    .nrs-hvr-boder-#{$key}-dark-#{$i} {
+      &:hover {
+        border: 1px solid mix(rgb(0, 0, 0), $val, $i * 10) !important;
+      }
+    }
+  }
+}
