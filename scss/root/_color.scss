@@ -58,30 +58,30 @@
     }
   }
 
-  @for $i from 1 through 10 {
+  @for $i from 1 through 9 {
     // light
     .nrs-txt-#{$key}-light-#{$i} {
-      color: mix(white, $val, $i * 10);
+      color: mix(#ffffff, $val, $i * 10);
     }
     .nrs-bg-#{$key}-light-#{$i} {
-      background-color: mix(white, $val, $i * 10);
+      background-color: mix(#ffffff, $val, $i * 10);
     }
     .nrs-hvr-#{$key}-light-#{$i} {
       &:hover {
-        background-color: mix(white, $val, $i * 10);
+        background-color: mix(#ffffff, $val, $i * 10);
       }
     }
     .nrs-boder-#{$key}-light-#{$i} {
-      border: 1px solid mix(white, $val, $i * 10) !important;
+      border: 1px solid mix(#ffffff, $val, $i * 10) !important;
     }
     .nrs-hvr-border-#{$key}-light-#{$i} {
       &:hover {
-        border: 1px solid mix(white, $val, $i * 10) !important;
+        border: 1px solid mix(#ffffff, $val, $i * 10) !important;
       }
     }
     .nrs-bg-active-#{$key}-light-#{$i} {
       &:active {
-        background-color: mix(white, $val, $i * 10);
+        background-color: mix(#ffffff, $val, $i * 10);
       }
     }
     .nrs-txt-active-#{$key}-light-#{$i} {
