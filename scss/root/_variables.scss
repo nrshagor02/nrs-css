@@ -68,15 +68,13 @@ $colors: (
   "magenta": #ff00ff,
 );
 $multicolor: (
-  "red-blue-yellow": (
-    red,
-    blue,
-    yellow,
+  "sky-blue": (
+    rgb(12, 179, 245),
+    rgb(0, 38, 255),
   ),
-  "red-purple-megenta": (
+  "red-orange": (
     #ff0000,
-    #800080,
-    #ff00ff,
+    #ff8801,
   ),
 );
 // box-shadow
